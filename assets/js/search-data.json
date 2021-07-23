@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Git & GitHub",
-            "content": "Git Bash: . git clone | git add | .",
+            "content": "Git bash commands . git clone | git add | git commit -m &quot;message&quot; | git commit -amend | . Vim . the default editor of git bash . You start in “normal mode” | i brings you to “insert mode” | esc brings you back to “normal mode” | :x equals :wq (:w save / :q exit) |",
             "url": "https://bollam1214.github.io/blog/git/cs50w/2021/07/23/git.html",
             "relUrl": "/git/cs50w/2021/07/23/git.html",
             "date": " • Jul 23, 2021"
