@@ -3,7 +3,6 @@ toc: true
 layout: post
 description: A minimal example of using markdown with fastpages.
 categories: [markdown]
-image: images/markdown.png
 title: An Example Markdown Post
 ---
 # Example Markdown Post
