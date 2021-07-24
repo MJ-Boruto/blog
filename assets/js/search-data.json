@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Git & GitHub",
-            "content": ". Summary . Git has given us the ability to keep track of any changes we make to code and to work with other people on it such that we can be working on multiple parts of the same project, and someone else working on the same project can also be working on multiple parts of the same project on different branches. . Git bash basoc commands . git clone git status git commit -am &quot;message&quot; //add all the files in this directory and commit git add git commit -amend (--no-edit) //update the commit git push git log git reset git reset --hard &lt;commmit&gt; git reset --hard origin/master git pull git merge . Merge Conflicts: Get rid of the commit markers and modify the file . &lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change) &lt;h1&gt;Welcome to my website!!&lt;h1&gt; ====== &lt;h1 style=&quot;color:blue;&quot;&gt;Welcome to my website!&lt;h1&gt; . b25e375573ac900ef0630c209eab753e75f2017b (Incoming Change) . to . &lt;h1 style=&quot;color:blue;&quot;&gt;Welcome to my website!!&lt;h1&gt; . and then commit and push again . Branching . git branch git checkout -b &lt;new branch name&gt; git checkout &lt;branch name&gt; . GitHub Pages . Repository name: user_name.github.io . Vim . You start in “normal mode” | i brings you to “insert mode” | esc brings you back to “normal mode” | :x equals :wq (:w save / :q exit) |",
+            "content": ". Summary . Git has given us the ability to keep track of any changes we make to code and to work with other people on it such that we can be working on multiple parts of the same project, and someone else working on the same project can also be working on multiple parts of the same project on different branches. . Git bash basoc commands . git clone git status git commit -am &quot;message&quot; //add all the files in this directory and commit git add git commit -amend (--no-edit) //update the commit git push git log git reset git reset --hard &lt;commmit&gt; git reset --hard origin/master git pull . Branching . git branch git checkout -b &lt;new branch name&gt; git checkout &lt;branch name&gt; git merge . Merge Conflicts . get rid of the commit markers | modify the file | commit and push | GitHub Pages . Repository name: user_name.github.io . Vim . You start in “normal mode” | i brings you to “insert mode” | esc brings you back to “normal mode” | :x equals :wq (:w save / :q exit) |",
             "url": "https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html",
             "relUrl": "/git/cs50w/2021/07/21/git.html",
             "date": " • Jul 21, 2021"
@@ -24,7 +24,7 @@
   
     
         ,"post2": {
-            "title": "fast.ai Lesson 1 Notes",
+            "title": "Lesson 1 notes",
             "content": "What you don&#39;t need, to deep learning . Myth(don&#39;t need) Truth . Lots of math | Just high school math is sufficient | . Lots of data | We&#39;ve seen record-breaking results with &lt;50 items of data | . Lots of expensive computers | You can get what you need for state of the art work for free | .",
             "url": "https://bollam1214.github.io/blog/fastai%20course/2021/07/18/lesson1.html",
             "relUrl": "/fastai%20course/2021/07/18/lesson1.html",

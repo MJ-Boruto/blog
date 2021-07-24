@@ -132,7 +132,7 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>
 <center>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=NcoBAfJ6l2Q" frameborder="0" allowfullscreen=""></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/NcoBAfJ6l2Q" frameborder="0" allowfullscreen=""></iframe>
 </center>
 </p>
 
@@ -162,28 +162,20 @@ git reset --hard &lt;commmit&gt;
 git reset --hard origin/master
 
 git pull
-git merge
+
 </code></pre>
-<h2 id="Merge-Conflicts:-Get-rid-of-the-commit-markers-and-modify-the-file">Merge Conflicts: Get rid of the commit markers and modify the file<a class="anchor-link" href="#Merge-Conflicts:-Get-rid-of-the-commit-markers-and-modify-the-file"> </a></h2>
-<pre><code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
-        &lt;h1&gt;Welcome to my website!!&lt;h1&gt;
-======
-        &lt;h1 style="color:blue;"&gt;Welcome to my website!&lt;h1&gt;
-</code></pre>
-<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>b25e375573ac900ef0630c209eab753e75f2017b (Incoming Change)</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-</blockquote>
-<p>to</p>
-<p><code>&lt;h1 style="color:blue;"&gt;Welcome to my website!!&lt;h1&gt;</code></p>
-<p>and then commit and push again</p>
 <h2 id="Branching">Branching<a class="anchor-link" href="#Branching"> </a></h2>
 <pre><code>git branch
 git checkout -b &lt;new branch name&gt;
-git checkout &lt;branch name&gt;</code></pre>
+git checkout &lt;branch name&gt;
+git merge
+
+</code></pre>
+<h2 id="Merge-Conflicts">Merge Conflicts<a class="anchor-link" href="#Merge-Conflicts"> </a></h2><ol>
+<li>get rid of the commit markers</li>
+<li>modify the file</li>
+<li>commit and push</li>
+</ol>
 
 </div>
 </div>
