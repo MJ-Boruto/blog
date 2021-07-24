@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Git & GitHub",
-            "content": "Git bash commands . git clone git status git add git commit -m &quot;message&quot; git commit -amend (--no-edit) git push . Vim . You start in “normal mode” | i brings you to “insert mode” | esc brings you back to “normal mode” | :x equals :wq (:w save / :q exit) |",
+            "content": ". Summary . Git has given us the ability to keep track of any changes we make to code and to work with other people on it such that we can be working on multiple parts of the same project, and someone else working on the same project can also be working on multiple parts of the same project on different branches. . Git bash basoc commands . git clone git status git commit -am &quot;message&quot; //add all the files in this directory and commit git add git commit -amend (--no-edit) //update the commit git push git log git reset git reset --hard &lt;commmit&gt; git reset --hard origin/master git pull git merge . Merge Conflicts: Get rid of the commit markers and modify the file . &lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change) &lt;h1&gt;Welcome to my website!!&lt;h1&gt; ====== &lt;h1 style=&quot;color:blue;&quot;&gt;Welcome to my website!&lt;h1&gt; . b25e375573ac900ef0630c209eab753e75f2017b (Incoming Change) . to . &lt;h1 style=&quot;color:blue;&quot;&gt;Welcome to my website!!&lt;h1&gt; . and then commit and push again . Branching . git branch git checkout -b &lt;new branch name&gt; git checkout &lt;branch name&gt; . GitHub Pages . Repository name: user_name.github.io . Vim . You start in “normal mode” | i brings you to “insert mode” | esc brings you back to “normal mode” | :x equals :wq (:w save / :q exit) |",
             "url": "https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html",
             "relUrl": "/git/cs50w/2021/07/21/git.html",
             "date": " • Jul 21, 2021"
@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "Jupyter tricks",
+            "title": "Jupyter Notebook tricks",
             "content": "Command Mode Shortcuts . There are a couple of useful keyboard shortcuts in Command Mode that you can leverage to make Jupyter Notebook faster to use. Remember that you can switch back and forth between Command Mode and Edit Mode with Esc and Enter. . h:: Show all shortcuts | m:: Convert cell to Markdown | y:: Convert cell to Code | d+d:: Delete cell | o:: Toggle between hide or show output | shift+↑/↓:: Select multiple cells. Once you have selected them you can operate on them like a batch (run, copy, paste etc). | shift+m:: Merge selected cells | . Cell Tricks . There are also some tricks that you can code into a cell: . ?function-name:: Shows the definition and docstring for that function | ??function-name:: Shows the source code for that function | doc(function-name):: Shows the definition, docstring and links to the documentation of the function (only works with fastai library imported) | Shift+Tab (press once):: See which parameters to pass to a function | Shift+Tab (press three times):: Get additional information on the method | . Line Magics . Line magics are functions that you can run on cells. They should be at the beginning of a line and take as an argument the rest of the line from where they are called. You call them by placing a &#39;%&#39; sign before the command. The most useful ones are: . %matplotlib inline:: Ensures that all matplotlib plots will be plotted in the output cell within the notebook and will be kept in the notebook when saved. | . This command is always called together at the beginning of every notebook of the fast.ai course. . %matplotlib inline . %timeit:: Runs a line ten thousand times and displays the average time it took to run. | . %timeit [i+1 for i in range(1000)] . 37.6 µs ± 3.71 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each) . %debug: Inspects a function which is showing an error using the Python debugger. If you type this in a cell just after an error, you will be directed to a console where you can inspect the values of all the variables. .",
             "url": "https://bollam1214.github.io/blog/fastai/jupyter/2021/07/20/jupyter.html",
             "relUrl": "/fastai/jupyter/2021/07/20/jupyter.html",
@@ -24,7 +24,7 @@
   
     
         ,"post2": {
-            "title": "Note of Lesson 1",
+            "title": "fast.ai Lesson 1 Notes",
             "content": "What you don&#39;t need, to deep learning . Myth(don&#39;t need) Truth . Lots of math | Just high school math is sufficient | . Lots of data | We&#39;ve seen record-breaking results with &lt;50 items of data | . Lots of expensive computers | You can get what you need for state of the art work for free | .",
             "url": "https://bollam1214.github.io/blog/fastai%20course/2021/07/18/lesson1.html",
             "relUrl": "/fastai%20course/2021/07/18/lesson1.html",

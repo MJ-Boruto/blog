@@ -8,8 +8,8 @@
 <meta name="generator" content="Jekyll v4.1.1" />
 <meta property="og:title" content="Git &amp; GitHub" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="a note of CS50W Lecture 1" />
-<meta property="og:description" content="a note of CS50W Lecture 1" />
+<meta name="description" content="CS50W Lecture 1 Notes" />
+<meta property="og:description" content="CS50W Lecture 1 Notes" />
 <link rel="canonical" href="https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html" />
 <meta property="og:url" content="https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html" />
 <meta property="og:site_name" content="Happy Goose Man" />
@@ -17,7 +17,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-07-21T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"a note of CS50W Lecture 1","url":"https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html"},"headline":"Git &amp; GitHub","dateModified":"2021-07-21T00:00:00-05:00","datePublished":"2021-07-21T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/git.png","@context":"https://schema.org"}</script>
+{"description":"CS50W Lecture 1 Notes","url":"https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html"},"headline":"Git &amp; GitHub","dateModified":"2021-07-21T00:00:00-05:00","datePublished":"2021-07-21T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/git.png","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bollam1214.github.io/blog/feed.xml" title="Happy Goose Man" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,7 +72,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Git &amp; GitHub</h1><p class="page-description">a note of CS50W Lecture 1</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-21T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Git &amp; GitHub</h1><p class="page-description">CS50W Lecture 1 Notes</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-21T00:00:00-05:00" itemprop="datePublished">
         Jul 21, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -130,20 +130,74 @@ window.onload = wrap_img;
         
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Git-bash-commands">Git bash commands<a class="anchor-link" href="#Git-bash-commands"> </a></h3>
-<pre><code>git clone
-git status
-git add
-git commit -m "message"
-git commit -amend (--no-edit)
-git push</code></pre>
+<p>
+<center>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/watch?v=NcoBAfJ6l2Q" frameborder="0" allowfullscreen=""></iframe>
+</center>
+</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Vim">Vim<a class="anchor-link" href="#Vim"> </a></h3><ol>
+<h2 id="Summary">Summary<a class="anchor-link" href="#Summary"> </a></h2><p>Git has given us the ability to keep track of any changes we make to code and to work with other people on it such that we can be working on multiple parts of the same project, and someone else working on the same project can also be working on multiple parts of the same project on different branches.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Git-bash-basoc-commands">Git bash basoc commands<a class="anchor-link" href="#Git-bash-basoc-commands"> </a></h2>
+<pre><code>git clone
+git status
+git commit -am "message" //add all the files in this directory and commit
+git add
+git commit -amend (--no-edit) //update the commit
+git push
+
+git log
+git reset
+git reset --hard &lt;commmit&gt;
+git reset --hard origin/master
+
+git pull
+git merge
+</code></pre>
+<h2 id="Merge-Conflicts:-Get-rid-of-the-commit-markers-and-modify-the-file">Merge Conflicts: Get rid of the commit markers and modify the file<a class="anchor-link" href="#Merge-Conflicts:-Get-rid-of-the-commit-markers-and-modify-the-file"> </a></h2>
+<pre><code>&lt;&lt;&lt;&lt;&lt;&lt; HEAD (Current Change)
+        &lt;h1&gt;Welcome to my website!!&lt;h1&gt;
+======
+        &lt;h1 style="color:blue;"&gt;Welcome to my website!&lt;h1&gt;
+</code></pre>
+<blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>b25e375573ac900ef0630c209eab753e75f2017b (Incoming Change)</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>to</p>
+<p><code>&lt;h1 style="color:blue;"&gt;Welcome to my website!!&lt;h1&gt;</code></p>
+<p>and then commit and push again</p>
+<h2 id="Branching">Branching<a class="anchor-link" href="#Branching"> </a></h2>
+<pre><code>git branch
+git checkout -b &lt;new branch name&gt;
+git checkout &lt;branch name&gt;</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="GitHub-Pages">GitHub Pages<a class="anchor-link" href="#GitHub-Pages"> </a></h2><p>Repository name: user_name.github.io</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Vim">Vim<a class="anchor-link" href="#Vim"> </a></h2><ol>
 <li>You start in “normal mode”</li>
 <li><code>i</code> brings you to “insert mode”</li>
 <li><code>esc</code> brings you back to “normal mode”</li>
