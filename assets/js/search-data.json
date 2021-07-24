@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Git & GitHub",
-            "content": "Git bash commands . git clone git status git add git commit -m &quot;message&quot; git commit -amend (--no-edit) git push . Vim . the default editor of git bash . You start in “normal mode” | i brings you to “insert mode” | esc brings you back to “normal mode” | :x equals :wq (:w save / :q exit) |",
+            "content": "Git bash commands . git clone git status git add git commit -m &quot;message&quot; git commit -amend (--no-edit) git push . Vim . You start in “normal mode” | i brings you to “insert mode” | esc brings you back to “normal mode” | :x equals :wq (:w save / :q exit) |",
             "url": "https://bollam1214.github.io/blog/git/cs50w/2021/07/21/git.html",
             "relUrl": "/git/cs50w/2021/07/21/git.html",
             "date": " • Jul 21, 2021"
