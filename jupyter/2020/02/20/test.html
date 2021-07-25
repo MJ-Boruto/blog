@@ -13,11 +13,11 @@
 <link rel="canonical" href="https://bollam1214.github.io/blog/jupyter/2020/02/20/test.html" />
 <meta property="og:url" content="https://bollam1214.github.io/blog/jupyter/2020/02/20/test.html" />
 <meta property="og:site_name" content="Happy Goose Man" />
-<meta property="og:image" content="https://bollam1214.github.io/blog/images/fastpages.png" />
+<meta property="og:image" content="https://bollam1214.github.io/blog/images/chart-preview.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-02-20T00:00:00-06:00" />
 <script type="application/ld+json">
-{"description":"A tutorial of fastpages for Jupyter notebooks.","url":"https://bollam1214.github.io/blog/jupyter/2020/02/20/test.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/jupyter/2020/02/20/test.html"},"headline":"Fastpages Notebook Blog Post","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","image":"https://bollam1214.github.io/blog/images/fastpages.png","@context":"https://schema.org"}</script>
+{"description":"A tutorial of fastpages for Jupyter notebooks.","url":"https://bollam1214.github.io/blog/jupyter/2020/02/20/test.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/jupyter/2020/02/20/test.html"},"headline":"Fastpages Notebook Blog Post","dateModified":"2020-02-20T00:00:00-06:00","datePublished":"2020-02-20T00:00:00-06:00","image":"https://bollam1214.github.io/blog/images/chart-preview.png","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bollam1214.github.io/blog/feed.xml" title="Happy Goose Man" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -84,7 +84,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      5 min read
+      6 min read
     
 </span></p>
 
@@ -355,6 +355,44 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_json</span><span class="p">(</span><span class="n">movies</span><span class="p">)</span> <span class="c1"># load movies data</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">' '</span><span class="p">,</span> <span class="s1">'_'</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span><span class="p">]</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Major_Genre'</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span> <span class="c1"># get unique field values</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">,</span> <span class="n">genres</span><span class="p">))</span> <span class="c1"># filter out None values</span>
+<span class="n">genres</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span> <span class="c1"># sort alphabetically</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">mpaa</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'G'</span><span class="p">,</span> <span class="s1">'PG'</span><span class="p">,</span> <span class="s1">'PG-13'</span><span class="p">,</span> <span class="s1">'R'</span><span class="p">,</span> <span class="s1">'NC-17'</span><span class="p">,</span> <span class="s1">'Not Rated'</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
