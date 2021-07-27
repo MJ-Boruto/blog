@@ -1,24 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>https://bollam1214.github.io/blog/markdown/2020/01/14/test-markdown-post.html</loc>
+<loc>https://bollam1214.github.io/blog/fastpages/markdown/2020/01/14/test-markdown-post.html</loc>
 <lastmod>2020-01-14T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://bollam1214.github.io/blog/jupyter/2020/02/20/test.html</loc>
+<loc>https://bollam1214.github.io/blog/fastpages/jupyter/2020/02/20/test.html</loc>
 <lastmod>2020-02-20T00:00:00-06:00</lastmod>
 </url>
 <url>
-<loc>https://bollam1214.github.io/blog/fastai/jupyter/2021/07/23/jupyter.html</loc>
+<loc>https://bollam1214.github.io/blog/jupyter/2021/07/23/jupyter.html</loc>
 <lastmod>2021-07-23T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://bollam1214.github.io/blog/git/cs50w/2021/07/26/git.html</loc>
 <lastmod>2021-07-26T00:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>https://bollam1214.github.io/blog/fastai%20course/2021/07/30/lesson1.html</loc>
-<lastmod>2021-07-30T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>https://bollam1214.github.io/blog/about/</loc>
