@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -114,7 +114,7 @@ window.onload = wrap_img;
     <ul class="section-nav">
 <li class="toc-entry toc-h2"><a href="#What-you-don't-need,-to-deep-learning">What you don&#39;t need, to deep learning </a></li>
 <li class="toc-entry toc-h2"><a href="#Where-is-deep-learning-the-best-known-approach?">Where is deep learning the best known approach? </a></li>
-<li class="toc-entry toc-h2"><a href="#History">History </a>
+<li class="toc-entry toc-h2"><a href="#Neural-Networks:-A-Brief-History">Neural Networks: A Brief History </a>
 <ul>
 <li class="toc-entry toc-h5"><a href="#The-Start">The Start </a></li>
 <li class="toc-entry toc-h5"><a href="#The-First-AI-Winter">The First AI Winter </a></li>
@@ -130,6 +130,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#The-Software:-PyTorch,-fastai,-and-Jupyter">The Software: PyTorch, fastai, and Jupyter </a></li>
 <li class="toc-entry toc-h2"><a href="#What-Is-Machine-Learning?">What Is Machine Learning? </a>
 <ul>
+<li class="toc-entry toc-h5"><a href="#Limitations-Inherent-To-Machine-Learning">Limitations Inherent To Machine Learning </a></li>
+<li class="toc-entry toc-h5"><a href="#using-a-model-after-its-trained-looks-like">using a model after it&#39;s trained looks like:</a></li>
+<li class="toc-entry toc-h5"><a href="#Neural-Network">Neural Network </a></li>
+<li class="toc-entry toc-h5"><a href="#Stochastic-Gradient-Descent-(SGD)">Stochastic Gradient Descent (SGD) </a></li>
+<li class="toc-entry toc-h5"><a href="#Why-224-pixels?">Why 224 pixels? </a></li>
 <li class="toc-entry toc-h5"><a href="#Classification-and-Regression:">Classification and Regression: </a></li>
 </ul>
 </li>
@@ -192,8 +197,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="History">
-<a class="anchor" href="#History" aria-hidden="true"><span class="octicon octicon-link"></span></a>History<a class="anchor-link" href="#History"> </a>
+<h2 id="Neural-Networks:-A-Brief-History">
+<a class="anchor" href="#Neural-Networks:-A-Brief-History" aria-hidden="true"><span class="octicon octicon-link"></span></a>Neural Networks: A Brief History<a class="anchor-link" href="#Neural-Networks:-A-Brief-History"> </a>
 </h2>
 <h5 id="The-Start">
 <a class="anchor" href="#The-Start" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Start<a class="anchor-link" href="#The-Start"> </a>
@@ -223,6 +228,13 @@ window.onload = wrap_img;
 <a class="anchor" href="#The-fast.ai-Learning-Philosophy" aria-hidden="true"><span class="octicon octicon-link"></span></a>The fast.ai Learning Philosophy<a class="anchor-link" href="#The-fast.ai-Learning-Philosophy"> </a>
 </h2>
 <p><img src="https://github.com/bollam1214/blog/blob/master/images/bat.jpg?raw=1" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h5 id="Projects-and-Mindset">
 <a class="anchor" href="#Projects-and-Mindset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects and Mindset<a class="anchor-link" href="#Projects-and-Mindset"> </a>
 </h5>
@@ -363,21 +375,158 @@ window.onload = wrap_img;
 <p>By 1961 his checkers-playing program beat the Connecticut state champion.</p>
 <p>In his classic 1962 essay "Artificial Intelligence: A Frontier of Automation", he wrote:</p>
 <blockquote>
-<p>Suppose we arrange for some automatic means of testing the effectiveness of any current weight assignment in terms of actual performance and provide a mechanism for altering the weight assignment so as to maximize the performance. We need not go into the details of such a procedure to see that it could be made entirely automatic and to see that a machine so programmed would "learn" from its experience.</p>
+<p>Suppose we arrange for some automatic means of testing the effectiveness of any current weight assignment in terms of actual performance and provide a mechanism for altering the weight assignment so as to maximize the performance.</p>
+<p>We need not go into the details of such a procedure to see that it could be made entirely automatic and to see that a machine so programmed would "learn" from its experience.</p>
 </blockquote>
+<p><img src="/blog/images/copied_from_nb/../images/ml.png" alt=""></p>
+<h5 id="Limitations-Inherent-To-Machine-Learning">
+<a class="anchor" href="#Limitations-Inherent-To-Machine-Learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limitations Inherent To Machine Learning<a class="anchor-link" href="#Limitations-Inherent-To-Machine-Learning"> </a>
+</h5>
 <ul>
-<li>the effectiveness → Loss </li>
-<li>weight assignment → parameters of Neural Networks</li>
-<li>performance → predictions</li>
-<li>mechanism for altering the weight assignment → stochastic gradient descent (SGD)</li>
-<li>maximize the performance → Minimize the Loss
-<img src="https://github.com/bollam1214/blog/blob/master/images/ml.png?raw=1" alt="">
-##### Limitations Inherent To Machine Learning</li>
 <li>A model cannot be created without data.</li>
 <li>A model can only learn to operate on the patterns seen in the input data used to train it.</li>
 <li>This learning approach only creates predictions, not recommended actions.</li>
 <li>It's not enough to just have examples of input data; we need labels for that data too</li>
 </ul>
+<h5>
+<a class="anchor" href="#using-a-model-after-its-trained-looks-like" aria-hidden="true"><span class="octicon octicon-link"></span></a>using a model after it's trained looks like:<img src="/blog/images/copied_from_nb/../images/trained.png" alt="">
+</h5>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Neural-Network">
+<a class="anchor" href="#Neural-Network" aria-hidden="true"><span class="octicon octicon-link"></span></a>Neural Network<a class="anchor-link" href="#Neural-Network"> </a>
+</h5>
+<ul>
+<li>
+<em>Universal approximation theorem</em> shows that Neural Network can solve any problem to any level of accuracy, in theory.</li>
+<li>In practice, they are often a suitable kind of model, and you can focus your effort on the process of training them—that is, of finding good weight assignments.</li>
+</ul>
+<h5 id="Stochastic-Gradient-Descent-(SGD)">
+<a class="anchor" href="#Stochastic-Gradient-Descent-(SGD)" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stochastic Gradient Descent (SGD)<a class="anchor-link" href="#Stochastic-Gradient-Descent-(SGD)"> </a>
+</h5>
+<ul>
+<li>One could imagine that you might need to find a new "mechanism" for automatically updating weights for every problem.</li>
+<li>a completely general way to update the weights of a neural network, to make it improve at any given task.</li>
+</ul>
+<p><img src="/blog/images/copied_from_nb/../images/nn.png" alt=""></p>
+<ul>
+<li>the effectiveness of ... → loss </li>
+<li>weight assignment → parameters of Neural Networks</li>
+<li>performance → predictions</li>
+<li>mechanism for ... → stochastic gradient descent (SGD)</li>
+<li>maximize the performance → Minimize the Loss</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai2.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Normally people import only parts they need but this method imports everything. fastai library is designed in a way that this only gives you the parts you need.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">PETS</span><span class="p">)</span><span class="o">/</span><span class="s1">'images'</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This downloads the dataset to computer if not exists.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">is_cat</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This checks if the first character is uppercase because this is how cats are labeled.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dls</span> <span class="o">=</span> <span class="n">ImageDataLoaders</span><span class="o">.</span><span class="n">from_name_func</span><span class="p">(</span>
+    <span class="n">path</span><span class="p">,</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">valid_pct</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">label_func</span><span class="o">=</span><span class="n">is_cat</span><span class="p">,</span> <span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">224</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>This creates "data loader" getting some information.</p>
+<h5 id="Why-224-pixels?">
+<a class="anchor" href="#Why-224-pixels?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why 224 pixels?<a class="anchor-link" href="#Why-224-pixels?"> </a>
+</h5>
+<p>This is the standard size for historical reasons (old pretrained models require this size exactly), but you can pass pretty much anything. If you increase the size, you'll often get a model with better results (since it will be able to focus on more details), but at the price of speed and memory consumption; the opposite is true if you decrease the size.</p>
 <h5 id="Classification-and-Regression:">
 <a class="anchor" href="#Classification-and-Regression:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classification and Regression:<a class="anchor-link" href="#Classification-and-Regression:"> </a>
 </h5>
@@ -385,6 +534,51 @@ window.onload = wrap_img;
 <li>A classification model is one which attempts to predict a class, or category</li>
 <li>A regression model is one which attempts to predict one or more numeric quantities, such as a temperature or a location.</li>
 </ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet34</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Learner is the thing that learns. It gets the data loader, architecture (in this case resnet34), and the metric human uses to evaluate it.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>Metric doesn’t affect the learner performance anyways but it’s just for humans.
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Metric is calculated using the data that's not used in training. This makes sure learner can't <strong>overfit</strong> to the data.</p>
 
 </div>
 </div>
