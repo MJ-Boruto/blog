@@ -130,8 +130,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#The-Software:-PyTorch,-fastai,-and-Jupyter">The Software: PyTorch, fastai, and Jupyter </a></li>
 <li class="toc-entry toc-h2"><a href="#What-Is-Machine-Learning?">What Is Machine Learning? </a>
 <ul>
-<li class="toc-entry toc-h5"><a href="#Limitations-Inherent-To-Machine-Learning">Limitations Inherent To Machine Learning </a></li>
-<li class="toc-entry toc-h5"><a href="#Classification-and-Regression:-A-classification-model-is-one-which-attempts-to-predict-a-class,-or-category-A-regression-model-is-one-which-attempts-to-predict-one-or-more-numeric-quantities,-such-as-a-temperature-or-a-location.">Classification and Regression: A classification model is one which attempts to predict a class, or category A regression model is one which attempts to predict one or more numeric quantities, such as a temperature or a location. </a></li>
+<li class="toc-entry toc-h5"><a href="#Classification-and-Regression:">Classification and Regression: </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Only-Avoid-Overfitting-When-Needed">Only Avoid Overfitting When Needed </a></li>
@@ -185,7 +184,7 @@ window.onload = wrap_img;
 <h2 id="Where-is-deep-learning-the-best-known-approach?">
 <a class="anchor" href="#Where-is-deep-learning-the-best-known-approach?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Where is deep learning the best known approach?<a class="anchor-link" href="#Where-is-deep-learning-the-best-known-approach?"> </a>
 </h2>
-<p><img src="/blog/images/copied_from_nb/../images/AI_the_best.jpeg" alt=""></p>
+<p><img src="https://github.com/bollam1214/blog/blob/master/images/AI_the_best.jpeg?raw=1" alt=""></p>
 
 </div>
 </div>
@@ -223,7 +222,7 @@ window.onload = wrap_img;
 <h2 id="The-fast.ai-Learning-Philosophy">
 <a class="anchor" href="#The-fast.ai-Learning-Philosophy" aria-hidden="true"><span class="octicon octicon-link"></span></a>The fast.ai Learning Philosophy<a class="anchor-link" href="#The-fast.ai-Learning-Philosophy"> </a>
 </h2>
-<p><img src="/blog/images/copied_from_nb/../images/bat.jpg" alt=""></p>
+<p><img src="https://github.com/bollam1214/blog/blob/master/images/bat.jpg?raw=1" alt=""></p>
 <h5 id="Projects-and-Mindset">
 <a class="anchor" href="#Projects-and-Mindset" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects and Mindset<a class="anchor-link" href="#Projects-and-Mindset"> </a>
 </h5>
@@ -255,13 +254,7 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install -Uqq fastbook
-<span class="kn">import</span> <span class="nn">fastbook</span>
-<span class="n">fastbook</span><span class="o">.</span><span class="n">setup_book</span><span class="p">()</span>
-
-<span class="kn">from</span> <span class="nn">fastbook</span> <span class="kn">import</span> <span class="o">*</span>
-
-<span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">fastai.vision.all</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">untar_data</span><span class="p">(</span><span class="n">URLs</span><span class="o">.</span><span class="n">PETS</span><span class="p">)</span><span class="o">/</span><span class="s1">'images'</span>
 
 <span class="k">def</span> <span class="nf">is_cat</span><span class="p">(</span><span class="n">x</span><span class="p">):</span> <span class="k">return</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">isupper</span><span class="p">()</span>
@@ -277,14 +270,84 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/usr/local/lib/python3.7/dist-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>error_rate</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.160716</td>
+      <td>0.019510</td>
+      <td>0.006089</td>
+      <td>00:50</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+<div class="output_area">
+
+
+<div class="output_html rendered_html output_subarea ">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: left;">
+      <th>epoch</th>
+      <th>train_loss</th>
+      <th>valid_loss</th>
+      <th>error_rate</th>
+      <th>time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>0.071681</td>
+      <td>0.011917</td>
+      <td>0.004060</td>
+      <td>00:55</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
     
 
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><img src="/blog/images/copied_from_nb/../images/first_model.png" alt="">
-Above code classifies cat and dog images. This is a deep learning model. Notice that this happened in less than 20 seconds. It might be different if you are running this in different device but if it's taking more than 5 minutes there is something wrong.</p>
+<p>Above code classifies cat and dog images. This is a deep learning model. Notice that this happened in less than 20 seconds. It might be different if you are running this in different device but if it's taking more than 5 minutes there is something wrong.</p>
 
 </div>
 </div>
@@ -308,21 +371,21 @@ Above code classifies cat and dog images. This is a deep learning model. Notice 
 <li>performance → predictions</li>
 <li>mechanism for altering the weight assignment → stochastic gradient descent (SGD)</li>
 <li>maximize the performance → Minimize the Loss
-<img src="/blog/images/copied_from_nb/../images/ml.png" alt="">
-</li>
-</ul>
-<h5 id="Limitations-Inherent-To-Machine-Learning">
-<a class="anchor" href="#Limitations-Inherent-To-Machine-Learning" aria-hidden="true"><span class="octicon octicon-link"></span></a>Limitations Inherent To Machine Learning<a class="anchor-link" href="#Limitations-Inherent-To-Machine-Learning"> </a>
-</h5>
-<ul>
+<img src="https://github.com/bollam1214/blog/blob/master/images/ml.png?raw=1" alt="">
+##### Limitations Inherent To Machine Learning</li>
 <li>A model cannot be created without data.</li>
 <li>A model can only learn to operate on the patterns seen in the input data used to train it.</li>
 <li>This learning approach only creates predictions, not recommended actions.</li>
 <li>It's not enough to just have examples of input data; we need labels for that data too</li>
 </ul>
-<h5 id="Classification-and-Regression:-A-classification-model-is-one-which-attempts-to-predict-a-class,-or-category-A-regression-model-is-one-which-attempts-to-predict-one-or-more-numeric-quantities,-such-as-a-temperature-or-a-location.">
-<a class="anchor" href="#Classification-and-Regression:-A-classification-model-is-one-which-attempts-to-predict-a-class,-or-category-A-regression-model-is-one-which-attempts-to-predict-one-or-more-numeric-quantities,-such-as-a-temperature-or-a-location." aria-hidden="true"><span class="octicon octicon-link"></span></a>Classification and Regression:<em> A classification model is one which attempts to predict a class, or category</em> A regression model is one which attempts to predict one or more numeric quantities, such as a temperature or a location.<a class="anchor-link" href="#Classification-and-Regression:-A-classification-model-is-one-which-attempts-to-predict-a-class,-or-category-A-regression-model-is-one-which-attempts-to-predict-one-or-more-numeric-quantities,-such-as-a-temperature-or-a-location."> </a>
+<h5 id="Classification-and-Regression:">
+<a class="anchor" href="#Classification-and-Regression:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classification and Regression:<a class="anchor-link" href="#Classification-and-Regression:"> </a>
 </h5>
+<ul>
+<li>A classification model is one which attempts to predict a class, or category</li>
+<li>A regression model is one which attempts to predict one or more numeric quantities, such as a temperature or a location.</li>
+</ul>
+
 </div>
 </div>
 </div>
