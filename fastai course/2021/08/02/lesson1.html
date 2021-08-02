@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="notes for the fast.ai 2020 course" />
 <meta property="og:description" content="notes for the fast.ai 2020 course" />
-<link rel="canonical" href="https://bollam1214.github.io/blog/fastai%20course/2021/07/31/lesson1.html" />
-<meta property="og:url" content="https://bollam1214.github.io/blog/fastai%20course/2021/07/31/lesson1.html" />
+<link rel="canonical" href="https://bollam1214.github.io/blog/fastai%20course/2021/08/02/lesson1.html" />
+<meta property="og:url" content="https://bollam1214.github.io/blog/fastai%20course/2021/08/02/lesson1.html" />
 <meta property="og:site_name" content="Happy Goose Man" />
 <meta property="og:image" content="https://bollam1214.github.io/blog/images/fastai.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-07-31T00:00:00-05:00" />
+<meta property="article:published_time" content="2021-08-02T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"notes for the fast.ai 2020 course","url":"https://bollam1214.github.io/blog/fastai%20course/2021/07/31/lesson1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/fastai%20course/2021/07/31/lesson1.html"},"headline":"Lesson 1 Notes","dateModified":"2021-07-31T00:00:00-05:00","datePublished":"2021-07-31T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/fastai.png","@context":"https://schema.org"}</script>
+{"description":"notes for the fast.ai 2020 course","url":"https://bollam1214.github.io/blog/fastai%20course/2021/08/02/lesson1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/fastai%20course/2021/08/02/lesson1.html"},"headline":"Lesson 1 Notes","dateModified":"2021-08-02T00:00:00-05:00","datePublished":"2021-08-02T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/fastai.png","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bollam1214.github.io/blog/feed.xml" title="Happy Goose Man" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,8 +72,8 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Lesson 1 Notes</h1><p class="page-description">notes for the fast.ai 2020 course</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-07-31T00:00:00-05:00" itemprop="datePublished">
-        Jul 31, 2021
+    <h1 class="post-title p-name" itemprop="name headline">Lesson 1 Notes</h1><p class="page-description">notes for the fast.ai 2020 course</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-08-02T00:00:00-05:00" itemprop="datePublished">
+        Aug 2, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
@@ -96,14 +96,14 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/bollam1214/blog/tree/master/_notebooks/2021-07-31-lesson1.ipynb" role="button" target="_blank">
+    <a href="https://github.com/bollam1214/blog/tree/master/_notebooks/2021-08-02-lesson1.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/bollam1214/blog/blob/master/_notebooks/2021-07-31-lesson1.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/bollam1214/blog/blob/master/_notebooks/2021-08-02-lesson1.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -137,10 +137,10 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h2"><a href="#How-Our-Image-Recognizer-Works">How Our Image Recognizer Works </a>
 <ul>
-<li class="toc-entry toc-h5"><a href="#Why-224-pixels?">Why 224 pixels? </a></li>
-<li class="toc-entry toc-h5"><a href="#Classification-and-Regression">Classification and Regression </a></li>
+<li class="toc-entry toc-h5"><a href="#Step-by-Step">Step by Step </a></li>
+<li class="toc-entry toc-h5"><a href="#Classification-vs-Regression">Classification vs Regression </a></li>
+<li class="toc-entry toc-h5"><a href="#Metric-vs-Loss">Metric vs Loss </a></li>
 <li class="toc-entry toc-h5"><a href="#Overfitting">Overfitting </a></li>
-<li class="toc-entry toc-h5"><a href="#Metrics-and-Loss">Metrics and Loss </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#Jargon-Recap">Jargon Recap </a></li>
@@ -151,7 +151,7 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-07-31-lesson1.ipynb
+# file to edit: _notebooks/2021-08-02-lesson1.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -428,6 +428,9 @@ window.onload = wrap_img;
 <h2 id="How-Our-Image-Recognizer-Works">
 <a class="anchor" href="#How-Our-Image-Recognizer-Works" aria-hidden="true"><span class="octicon octicon-link"></span></a>How Our Image Recognizer Works<a class="anchor-link" href="#How-Our-Image-Recognizer-Works"> </a>
 </h2>
+<h5 id="Step-by-Step">
+<a class="anchor" href="#Step-by-Step" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step by Step<a class="anchor-link" href="#Step-by-Step"> </a>
+</h5>
 </div>
 </div>
 </div>
@@ -547,40 +550,10 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Why-224-pixels?">
-<a class="anchor" href="#Why-224-pixels?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why 224 pixels?<a class="anchor-link" href="#Why-224-pixels?"> </a>
-</h5>
-<p>This is the standard size for historical reasons (old pretrained models require this size exactly), but you can pass pretty much anything. If you increase the size, you'll often get a model with better results (since it will be able to focus on more details), but at the price of speed and memory consumption; the opposite is true if you decrease the size.</p>
-<h5 id="Classification-and-Regression">
-<a class="anchor" href="#Classification-and-Regression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classification and Regression<a class="anchor-link" href="#Classification-and-Regression"> </a>
-</h5>
-<ul>
-<li>A classification model is one which attempts to predict a class, or category</li>
-<li>A regression model is one which attempts to predict one or more numeric quantities, such as a temperature or a location.</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="Overfitting">
-<a class="anchor" href="#Overfitting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overfitting<a class="anchor-link" href="#Overfitting"> </a>
-</h5>
-<p><img src="/blog/images/copied_from_nb/../images/overfitting.png" alt="">
-The risk is that if we train our model badly, instead of learning general lessons it effectively memorizes what it has already seen, and then it will make poor predictions about new images.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <p></p>
-<div class="flash flash-success">
-    <svg class="octicon octicon-checklist octicon octicon-checklist" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 1.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v7.736a.75.75 0 101.5 0V1.75A1.75 1.75 0 0011.25 0h-8.5A1.75 1.75 0 001 1.75v11.5c0 .966.784 1.75 1.75 1.75h3.17a.75.75 0 000-1.5H2.75a.25.25 0 01-.25-.25V1.75zM4.75 4a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zM4 7.75A.75.75 0 014.75 7h2a.75.75 0 010 1.5h-2A.75.75 0 014 7.75zm11.774 3.537a.75.75 0 00-1.048-1.074L10.7 14.145 9.281 12.72a.75.75 0 00-1.062 1.058l1.943 1.95a.75.75 0 001.055.008l4.557-4.45z"></path></svg>
-    <strong>Tip: </strong>Only Avoid Overfitting When Needed: We often see practitioners using over-fitting avoidance techniques even when they have enough data that they didn’t need to do so, ending up with a model that may be less accurate than what they could have achieved.
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>Why 224 pixels? This is the standard size for historical reasons (old pretrained models require this size exactly), but you can pass pretty much anything. If you increase the size, you’ll often get a model with better results (since it will be able to focus on more details), but at the price of speed and memory consumption; the opposite is true if you decrease the size. 
 </div>
 
 </div>
@@ -613,13 +586,6 @@ The risk is that if we train our model badly, instead of learning general lesson
 </li>
 <li>Using pretrained models is the most important method we have to allow us to train more accurate models, more quickly, with less data, and less time and money.</li>
 </ul>
-<h5 id="Metrics-and-Loss">
-<a class="anchor" href="#Metrics-and-Loss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metrics and Loss<a class="anchor-link" href="#Metrics-and-Loss"> </a>
-</h5>
-<ul>
-<li>Loss: a "measure of performance" easy for stochastic gradient descent to use</li>
-<li>metric: easy for you to understand and close to what you want the model to do</li>
-</ul>
 
 </div>
 </div>
@@ -648,6 +614,52 @@ The risk is that if we train our model badly, instead of learning general lesson
 <li>Use one epoch to fit just those parts of the model necessary to get the new random head to work correctly with your dataset.</li>
 <li>Use the number of epochs requested when calling the method to fit the entire model, updating the weights of the later layers (especially the head) faster than the earlier layers (which, as we'll see, generally don't require many changes from the pretrained weights).</li>
 </ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Classification-vs-Regression">
+<a class="anchor" href="#Classification-vs-Regression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Classification vs Regression<a class="anchor-link" href="#Classification-vs-Regression"> </a>
+</h5>
+<ul>
+<li>A classification model is one which attempts to predict a class, or category</li>
+<li>A regression model is one which attempts to predict one or more numeric quantities, such as a temperature or a location.</li>
+</ul>
+<h5 id="Metric-vs-Loss">
+<a class="anchor" href="#Metric-vs-Loss" aria-hidden="true"><span class="octicon octicon-link"></span></a>Metric vs Loss<a class="anchor-link" href="#Metric-vs-Loss"> </a>
+</h5>
+<ul>
+<li>Loss: a "measure of performance" easy for stochastic gradient descent to use</li>
+<li>metric: easy for you to understand and close to what you want the model to do</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Overfitting">
+<a class="anchor" href="#Overfitting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Overfitting<a class="anchor-link" href="#Overfitting"> </a>
+</h5>
+<p>the single most important and challenging issue when training</p>
+<p>The risk is that if we train our model badly, instead of learning general lessons it effectively memorizes what it has already seen, and then it will make poor predictions about new images.
+<img src="/blog/images/copied_from_nb/../images/overfitting.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash flash-success">
+    <svg class="octicon octicon-checklist octicon octicon-checklist" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 1.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v7.736a.75.75 0 101.5 0V1.75A1.75 1.75 0 0011.25 0h-8.5A1.75 1.75 0 001 1.75v11.5c0 .966.784 1.75 1.75 1.75h3.17a.75.75 0 000-1.5H2.75a.25.25 0 01-.25-.25V1.75zM4.75 4a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zM4 7.75A.75.75 0 014.75 7h2a.75.75 0 010 1.5h-2A.75.75 0 014 7.75zm11.774 3.537a.75.75 0 00-1.048-1.074L10.7 14.145 9.281 12.72a.75.75 0 00-1.062 1.058l1.943 1.95a.75.75 0 001.055.008l4.557-4.45z"></path></svg>
+    <strong>Tip: </strong>Only Avoid Overfitting When Needed: We often see practitioners using over-fitting avoidance techniques even when they have enough data that they didn’t need to do so, ending up with a model that may be less accurate than what they could have achieved.
+</div>
 
 </div>
 </div>
@@ -814,7 +826,7 @@ If you put one of the images in your training set and one in the validation set,
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/blog/fastai%20course/2021/07/31/lesson1.html" hidden></a>
+</script><a class="u-url" href="/blog/fastai%20course/2021/08/02/lesson1.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
