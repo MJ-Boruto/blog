@@ -78,7 +78,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -208,6 +208,21 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><code>%debug</code>: Inspects a function which is showing an error using the <a href="https://docs.python.org/3/library/pdb.html">Python debugger</a>. If you type this in a cell just after an error, you will be directed to a console where you can inspect the values of all the variables.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Here are some other features that are very useful in Jupyter notebooks:</p>
+<ul>
+<li>At any point, if you don't remember the exact spelling of a function or argument name, you can press Tab to get autocompletion suggestions.</li>
+<li>When inside the parentheses of a function, pressing Shift and Tab simultaneously will display a window with the signature of the function and a short description. Pressing these keys twice will expand the documentation, and pressing them three times will open a full window with the same information at the bottom of your screen.</li>
+<li>In a cell, typing <code>?func_name</code> and executing will open a window with the signature of the function and a short description.</li>
+<li>In a cell, typing <code>??func_name</code> and executing will open a window with the signature of the function, a short description, and the source code.</li>
+<li>If you are using the fastai library, we added a <code>doc</code> function for you: executing <code>doc(func_name)</code> in a cell will open a window with the signature of the function, a short description and links to the source code on GitHub and the full documentation of the function in the <a href="https://docs.fast.ai">library docs</a>.</li>
+<li>Unrelated to the documentation but still very useful: to get help at any point if you get an error, type <code>%debug</code> in the next cell and execute to open the <a href="https://docs.python.org/3/library/pdb.html">Python debugger</a>, which will let you inspect the content of every variable.</li>
+</ul>
 
 </div>
 </div>
