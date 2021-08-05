@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Chapter 2 Notes",
-            "content": ".",
+            "content": "Gathering Data . The project I&#39;ll be completing in this chapter is a anatidae detector. It will discriminate between three types of anatidae: ducks, geese, and swan. . At the time of writing, Bing Image Search is the best option we know of for finding and downloading images. It&#39;s free for up to 1,000 queries per month, and each query can download up to 150 images. . key = os.environ.get(&#39;AZURE_SEARCH_KEY&#39;, &#39;49e2bd87d5874f8c9f46357faa19b802&#39;) . search_images_bing . results = search_images_bing(key, &#39;duck&#39;) ims = results.attrgot(&#39;contentUrl&#39;) len(ims) . bear_types = &#39;grizzly&#39;,&#39;black&#39;,&#39;teddy&#39; path = Path(&#39;bears&#39;) . if not path.exists(): path.mkdir() for o in bear_types: dest = (path/o) dest.mkdir(exist_ok=True) results = search_images_bing(key, f&#39;{o} bear&#39;) download_images(dest, urls=results.attrgot(&#39;contentUrl&#39;)) . failed = verify_images(fns) failed.map(Path.unlink); . class DataLoaders(GetAttr): def __init__(self, *loaders): self.loaders = loaders def __getitem__(self, i): return self.loaders[i] train,valid = add_props(lambda i,self: self[i]) . bears = DataBlock( blocks=(ImageBlock, CategoryBlock), get_items=get_image_files, splitter=RandomSplitter(valid_pct=0.2, seed=42), get_y=parent_label, item_tfms=Resize(128)) . dls = bears.dataloaders(path) .",
             "url": "https://bollam1214.github.io/blog/fastbook/2021/08/02/ch2.html",
             "relUrl": "/fastbook/2021/08/02/ch2.html",
             "date": " • Aug 2, 2021"
