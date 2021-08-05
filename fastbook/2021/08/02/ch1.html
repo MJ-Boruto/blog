@@ -466,6 +466,7 @@ window.onload = wrap_img;
 <em>cnn_learner</em> also has a parameter <em>pretrained</em>, which defaults to <em>True</em>.</li>
 </ul>
 <p>Using pretrained models is the most important method we have to allow us to train more accurate models, more quickly, with less data, and less time and money.</p>
+<p>The <code>34</code> in <code>resnet34</code> refers to the number of layers in this variant of the architecture (other options are <code>18</code>, <code>50</code>, <code>101</code>, and <code>152</code>). Models using architectures with more layers take longer to train, and are more prone to overfitting (i.e. you can't train them for as many epochs before the accuracy on the validation set starts getting worse). On the other hand, when using more data, they can be quite a bit more accurate.</p>
 <div class="highlight"><pre><span></span><span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 <ol>
