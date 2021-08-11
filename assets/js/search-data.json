@@ -3,9 +3,9 @@
     
         "post0": {
             "title": "The Amazing Duck Classifier!",
-            "content": "from fastai.vision.all import * from fastai.vision.widgets import * . path = Path() learn_inf = load_learner(path/&#39;export.pkl&#39;, cpu=True) btn_upload = widgets.FileUpload() out_pl = widgets.Output() lbl_pred = widgets.Label() . def on_data_change(change): lbl_pred.value = &#39;&#39; img = PILImage.create(btn_upload.data[-1]) out_pl.clear_output() with out_pl: display(img.to_thumb(128,128)) pred,pred_idx,probs = learn_inf.predict(img) lbl_pred.value = f&#39;Prediction: {pred}; Probability: {probs[pred_idx]:.04f}&#39; . btn_upload.observe(on_data_change, names=[&#39;data&#39;]) . display(VBox([widgets.Label(&#39;Select your Duck!&#39;), btn_upload, out_pl, lbl_pred])) .",
-            "url": "https://bollam1214.github.io/blog/2021/08/12/duck.html",
-            "relUrl": "/2021/08/12/duck.html",
+            "content": "from fastai.vision.all import * from fastai.vision.widgets import * . You need to know whether you&#39;re being chased by a cute white duck, or a sweet rubber duck, and you need an answer fast? Then you&#39;ve come to the right place. Take a pic of the lovely creature, and click &#39;upload&#39; to classify it. (Important: this only handles white ducks, green head ducks, and rubber ducks. It will not give a sensible answer for goose, a duck market, a swan, or hot dogs. . path = Path() learn_inf = load_learner(path/&#39;export.pkl&#39;, cpu=True) btn_upload = widgets.FileUpload() out_pl = widgets.Output() lbl_pred = widgets.Label() . def on_data_change(change): lbl_pred.value = &#39;&#39; img = PILImage.create(btn_upload.data[-1]) out_pl.clear_output() with out_pl: display(img.to_thumb(128,128)) pred,pred_idx,probs = learn_inf.predict(img) lbl_pred.value = f&#39;Prediction: {pred}; Probability: {probs[pred_idx]:.04f}&#39; . btn_upload.observe(on_data_change, names=[&#39;data&#39;]) . display(VBox([widgets.Label(&#39;Select your Duck!&#39;), btn_upload, out_pl, lbl_pred])) .",
+            "url": "https://bollam1214.github.io/blog/fastbook/2021/08/12/duck.html",
+            "relUrl": "/fastbook/2021/08/12/duck.html",
             "date": " • Aug 12, 2021"
         }
         
