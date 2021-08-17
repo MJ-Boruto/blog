@@ -144,18 +144,6 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p></p>
-<div class="flash">
-    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>This post is unfinished.
-</div>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Testing-Functions">
 <a class="anchor" href="#Testing-Functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing Functions<a class="anchor-link" href="#Testing-Functions"> </a>
 </h2>
@@ -892,40 +880,8 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">mv</span> export.pkl gdrive/MyDrive/
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn_inf</span> <span class="o">=</span> <span class="n">load_learner</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'gdrive/MyDrive/export.pkl'</span><span class="p">)</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">learn_inf</span><span class="o">.</span><span class="n">dls</span><span class="o">.</span><span class="n">vocab</span>
+<span class="n">learn_inf</span> <span class="o">=</span> <span class="n">load_learner</span><span class="p">(</span><span class="n">path</span><span class="o">/</span><span class="s1">'gdrive/MyDrive/export.pkl'</span><span class="p">)</span>
+<span class="n">learn_inf</span><span class="o">.</span><span class="n">dls</span><span class="o">.</span><span class="n">vocab</span>
 </pre></div>
 
     </div>
@@ -957,6 +913,8 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 <h3 id="Creating-a-Notebook-App-from-the-Model">
 <a class="anchor" href="#Creating-a-Notebook-App-from-the-Model" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating a Notebook App from the Model<a class="anchor-link" href="#Creating-a-Notebook-App-from-the-Model"> </a>
 </h3>
+<p>With ipywidgets, we can build up our GUI step by step. We will use this approach to create a simple image classifier. First, we need a file upload widget:</p>
+
 </div>
 </div>
 </div>
@@ -1020,6 +978,14 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use an <code>Output</code> widget to display it:</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1029,6 +995,7 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">out_pl</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
 <span class="n">out_pl</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">out_pl</span><span class="p">:</span> <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">to_thumb</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">))</span>
 <span class="n">out_pl</span>
 </pre></div>
 
@@ -1039,24 +1006,14 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 </div>
     
 
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
+<div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">with</span> <span class="n">out_pl</span><span class="p">:</span> <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">to_thumb</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span><span class="mi">128</span><span class="p">))</span>
-<span class="n">out_pl</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then we can get our predictions:</p>
 
 </div>
-    
-
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1089,6 +1046,14 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>and use a <code>Label</code> to display them:</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1108,6 +1073,15 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>Label(value='Prediction: white; Probability: 1.0000')</code></p>
+<p>We'll need a button to do the classification. It looks exactly like the upload button:</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1130,6 +1104,14 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="data:image/png;base64,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" alt="image.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We'll also need a click event handler; that is, a function that will be called when it's pressed.</p>
 
 </div>
 </div>
@@ -1158,6 +1140,15 @@ X = torch.linalg.solve(A, B) (Triggered internally at  /pytorch/aten/src/ATen/na
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You can test the button now by pressing it, and you should see the image and predictions update automatically!</p>
+<p>We can now put them all in a vertical box (VBox) to complete our GUI:</p>
+
+</div>
+</div>
+</div>
     
     
 <div class="cell border-box-sizing code_cell rendered">
@@ -1219,22 +1210,19 @@ In early 2020 the simplest (and free!) approach is to use <a href="https://mybin
 <a class="anchor" href="#Get-Writing!" aria-hidden="true"><span class="octicon octicon-link"></span></a>Get Writing!<a class="anchor-link" href="#Get-Writing!"> </a>
 </h2>
 <p>Rachel Thomas, cofounder of fast.ai, wrote in the article <a href="https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045">"Why You (Yes, You) Should Blog"</a>:</p>
-
-<pre><code>asciidoc
-____
-The top advice I would give my younger self would be to start blogging sooner. Here are some reasons to blog:
-
-* It’s like a resume, only better. I know of a few people who have had blog posts lead to job offers!
-* Helps you learn. Organizing knowledge always helps me synthesize my own ideas. One of the tests of whether you understand something is whether you can explain it to someone else. A blog post is a great way to do that.
-* I’ve gotten invitations to conferences and invitations to speak from my blog posts. I was invited to the TensorFlow Dev Summit (which was awesome!) for writing a blog post about how I don’t like TensorFlow.
-* Meet new people. I’ve met several people who have responded to blog posts I wrote.
-* Saves time. Any time you answer a question multiple times through email, you should turn it into a blog post, which makes it easier for you to share the next time someone asks.
-____</code></pre>
+<p>The top advice I would give my younger self would be to start blogging sooner. Here are some reasons to blog:</p>
+<ul>
+<li>It’s like a resume, only better. I know of a few people who have had blog posts lead to job offers!</li>
+<li>Helps you learn. Organizing knowledge always helps me synthesize my own ideas. One of the tests of whether you understand something is whether you can explain it to someone else. A blog post is a great way to do that.</li>
+<li>I’ve gotten invitations to conferences and invitations to speak from my blog posts. I was invited to the TensorFlow Dev Summit (which was awesome!) for writing a blog post about how I don’t like TensorFlow.</li>
+<li>Meet new people. I’ve met several people who have responded to blog posts I wrote.</li>
+<li>Saves time. Any time you answer a question multiple times through email, you should turn it into a blog post, which makes it easier for you to share the next time someone asks.</li>
+</ul>
 <p>Perhaps her most important tip is this:</p>
 <blockquote>
-<p>:You are best positioned to help people one step behind you. The material is still fresh in your mind. Many experts have forgotten what it was like to be a beginner (or an intermediate) and have forgotten why the topic is hard to understand when you first hear it. The context of your particular background, your particular style, and your knowledge level will give a different twist to what you’re writing about.
-We've provided full details on how to set up a blog in <a href="https://fastpages.fast.ai">fastpages</a>. If you don't have a blog already, take a look at that now, because we've got a really great approach set up for you to start blogging for free, with no ads—and you can even use Jupyter Notebook!</p>
+<p>You are best positioned to help people one step behind you. The material is still fresh in your mind. Many experts have forgotten what it was like to be a beginner (or an intermediate) and have forgotten why the topic is hard to understand when you first hear it. The context of your particular background, your particular style, and your knowledge level will give a different twist to what you’re writing about.</p>
 </blockquote>
+<p>The full details on how to set up a blog are in <a href="https://fastpages.fast.ai">fastpages</a>. If you don't have a blog already, take a look at that now, because we've got a really great approach set up for you to start blogging for free, with no ads—and you can even use Jupyter Notebook!</p>
 
 </div>
 </div>
