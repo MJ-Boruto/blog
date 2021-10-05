@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="notes for the course by NCCU MIS" />
 <meta property="og:description" content="notes for the course by NCCU MIS" />
-<link rel="canonical" href="https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/09/14/net1.html" />
-<meta property="og:url" content="https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/09/14/net1.html" />
+<link rel="canonical" href="https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/10/05/net1.html" />
+<meta property="og:url" content="https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/10/05/net1.html" />
 <meta property="og:site_name" content="Happy Goose Man" />
 <meta property="og:image" content="https://bollam1214.github.io/blog/images/networking.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-09-14T00:00:00-05:00" />
+<meta property="article:published_time" content="2021-10-05T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"notes for the course by NCCU MIS","url":"https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/09/14/net1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/09/14/net1.html"},"headline":"Computer Networks Ch1","dateModified":"2021-09-14T00:00:00-05:00","datePublished":"2021-09-14T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/networking.jpg","@context":"https://schema.org"}</script>
+{"description":"notes for the course by NCCU MIS","url":"https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/10/05/net1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/nccu/mis/conputer%20networks/2021/10/05/net1.html"},"headline":"Computer Networks Ch1","dateModified":"2021-10-05T00:00:00-05:00","datePublished":"2021-10-05T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/networking.jpg","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bollam1214.github.io/blog/feed.xml" title="Happy Goose Man" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,13 +72,13 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Computer Networks Ch1</h1><p class="page-description">notes for the course by NCCU MIS</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-09-14T00:00:00-05:00" itemprop="datePublished">
-        Sep 14, 2021
+    <h1 class="post-title p-name" itemprop="name headline">Computer Networks Ch1</h1><p class="page-description">notes for the course by NCCU MIS</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-05T00:00:00-05:00" itemprop="datePublished">
+        Oct 5, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      4 min read
     
 </span></p>
 
@@ -102,14 +102,14 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/bollam1214/blog/tree/master/_notebooks/2021-09-14-net1.ipynb" role="button" target="_blank">
+    <a href="https://github.com/bollam1214/blog/tree/master/_notebooks/2021-10-05-net1.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/bollam1214/blog/blob/master/_notebooks/2021-09-14-net1.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/bollam1214/blog/blob/master/_notebooks/2021-10-05-net1.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -132,16 +132,23 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h4"><a href="#our-goal:">our goal: </a></li>
 <li class="toc-entry toc-h4"><a href="#overview:">overview: </a></li>
-<li class="toc-entry toc-h3"><a href="#What's-the-Internet">What&#39;s the Internet </a>
-<ul>
-<li class="toc-entry toc-h4"><a href="#History:-Arpanet">History: Arpanet </a></li>
-<li class="toc-entry toc-h4"><a href="#Difference-between-DSL-and-cable">Difference between DSL and cable </a></li>
-<li class="toc-entry toc-h4"><a href="#Wireless-access-networks">Wireless access networks </a></li>
-<li class="toc-entry toc-h4"><a href="#頻率高:-穿透建築物能力較強、繞射能力較差、能量較高">頻率高: 穿透建築物能力較強、繞射能力較差、能量較高 </a></li>
-<li class="toc-entry toc-h4"><a href="#FDM-vs-TDM">FDM vs TDM </a></li>
-<li class="toc-entry toc-h4"><a href="#circuit-switching--vs-packet-switching-example:">circuit switching  vs packet switching example: </a></li>
 </ul>
 </li>
+<li class="toc-entry toc-h1"><a href="#What's-the-Internet">What&#39;s the Internet </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Difference-between-DSL-and-cable">Difference between DSL and cable </a></li>
+<li class="toc-entry toc-h3"><a href="#Wireless-access-networks">Wireless access networks </a></li>
+<li class="toc-entry toc-h3"><a href="#FDM-vs-TDM">FDM vs TDM </a></li>
+<li class="toc-entry toc-h3"><a href="#circuit-switching--vs-packet-switching-example:">circuit switching  vs packet switching example: </a></li>
+<li class="toc-entry toc-h3"><a href="#How-do-loss-and-delay-occur?">How do loss and delay occur? </a></li>
+<li class="toc-entry toc-h3"><a href="#Four-sources-of-packet-delay">Four sources of packet delay </a></li>
+<li class="toc-entry toc-h3"><a href="#“Real”-Internet-delays,-routes">“Real” Internet delays, routes </a></li>
+<li class="toc-entry toc-h3"><a href="#Internet-protocol-stack">Internet protocol stack </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#L5,-L6">L5, L6 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h3"><a href="#Encapsulation">Encapsulation </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Questionnaire">Questionnaire </a></li>
@@ -150,7 +157,7 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-09-14-net1.ipynb
+# file to edit: _notebooks/2021-10-05-net1.ipynb
 -->
 
 <div class="container" id="notebook-container">
@@ -164,13 +171,6 @@ window.onload = wrap_img;
 <p>Computer network is an essential <strong>enabling technology</strong> to help users to develop network based applications that can <strong>reach everywhere instantly</strong>.
 An MIS student (as an architect, and a designer) need to be familiar with <strong>the underlying technologies</strong> and their <strong>design rationale</strong>. Hence, we can develop network applications with <strong>a more appropriate, reasonable, and robust design</strong>.</p>
 <p>And more, help your parents to deal with home network problems.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Desired-Outcomes">
 <a class="anchor" href="#Desired-Outcomes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Desired Outcomes<a class="anchor-link" href="#Desired-Outcomes"> </a>
 </h3>
@@ -263,16 +263,14 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="What's-the-Internet">
+<h1 id="What's-the-Internet">
 <a class="anchor" href="#What's-the-Internet" aria-hidden="true"><span class="octicon octicon-link"></span></a>What's the Internet<a class="anchor-link" href="#What's-the-Internet"> </a>
-</h3>
+</h1>
 <ul>
 <li>billions of connected devices running <strong>network apps</strong> via different <strong>communication links</strong>.</li>
 <li>infrastructure that provides services to applications</li>
 </ul>
-<h4 id="History:-Arpanet">
-<a class="anchor" href="#History:-Arpanet" aria-hidden="true"><span class="octicon octicon-link"></span></a>History: Arpanet<a class="anchor-link" href="#History:-Arpanet"> </a>
-</h4>
+<p><strong>History: Arpanet</strong></p>
 <p>John Naughton(2000)</p>
 <ul>
 <li>communication links, packet switches</li>
@@ -280,9 +278,9 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 <li>Internet standards: IETF(Internet Engineering Task Force)會匯集產官學界，審核編修RFC(request for comments)(protocol計劃書)</li>
 <li>network structure: network edge, access networks(last mile) , network core</li>
 </ul>
-<h4 id="Difference-between-DSL-and-cable">
+<h3 id="Difference-between-DSL-and-cable">
 <a class="anchor" href="#Difference-between-DSL-and-cable" aria-hidden="true"><span class="octicon octicon-link"></span></a>Difference between DSL and cable<a class="anchor-link" href="#Difference-between-DSL-and-cable"> </a>
-</h4>
+</h3>
 <table>
 <thead>
 <tr>
@@ -316,25 +314,15 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 </tr>
 </tbody>
 </table>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Wireless-access-networks">
+<h3 id="Wireless-access-networks">
 <a class="anchor" href="#Wireless-access-networks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wireless access networks<a class="anchor-link" href="#Wireless-access-networks"> </a>
-</h4>
+</h3>
 <ul>
 <li>via <strong>base station</strong> aka <strong>"access point"</strong> (不論行動網路或WiFi)</li>
 <li>但在台灣<strong>基地台</strong>專指裝在頂樓的4G、5G基地台，而AP則專指WiFi用的</li>
 <li>Wireless LANs: WiFi6速度現在堪比有線網路了，但唯一無法克服的是光的所有性質：反射、折射、繞射、干涉...</li>
 </ul>
-<h4 id="頻率高:-穿透建築物能力較強、繞射能力較差、能量較高">
-<a class="anchor" href="#%E9%A0%BB%E7%8E%87%E9%AB%98:-%E7%A9%BF%E9%80%8F%E5%BB%BA%E7%AF%89%E7%89%A9%E8%83%BD%E5%8A%9B%E8%BC%83%E5%BC%B7%E3%80%81%E7%B9%9E%E5%B0%84%E8%83%BD%E5%8A%9B%E8%BC%83%E5%B7%AE%E3%80%81%E8%83%BD%E9%87%8F%E8%BC%83%E9%AB%98" aria-hidden="true"><span class="octicon octicon-link"></span></a>頻率高: 穿透建築物能力較強、繞射能力較差、能量較高<a class="anchor-link" href="#%E9%A0%BB%E7%8E%87%E9%AB%98:-%E7%A9%BF%E9%80%8F%E5%BB%BA%E7%AF%89%E7%89%A9%E8%83%BD%E5%8A%9B%E8%BC%83%E5%BC%B7%E3%80%81%E7%B9%9E%E5%B0%84%E8%83%BD%E5%8A%9B%E8%BC%83%E5%B7%AE%E3%80%81%E8%83%BD%E9%87%8F%E8%BC%83%E9%AB%98"> </a>
-</h4>
-<p>WiFi實際上是商標的名字，不是指技術(e.g. WiFi6：IEEE 802.11ax)</p>
+<p>頻率高: 穿透建築物能力較強、繞射能力較差、能量較高</p>
 
 </div>
 </div>
@@ -345,7 +333,7 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 <p></p>
 <div class="flash">
     <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
-    <strong>Note: </strong>a router acts as a server (bank counter), like a post office.
+    <strong>Note: </strong>WiFi實際上是商標的名字，不是指技術(e.g. WiFi6：IEEE 802.11ax)
 </div>
 
 </div>
@@ -354,13 +342,13 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="FDM-vs-TDM">
+<h3 id="FDM-vs-TDM">
 <a class="anchor" href="#FDM-vs-TDM" aria-hidden="true"><span class="octicon octicon-link"></span></a>FDM vs TDM<a class="anchor-link" href="#FDM-vs-TDM"> </a>
-</h4>
+</h3>
 <p>FM radio stations also use FDM</p>
-<h4 id="circuit-switching--vs-packet-switching-example:">
+<h3 id="circuit-switching--vs-packet-switching-example:">
 <a class="anchor" href="#circuit-switching--vs-packet-switching-example:" aria-hidden="true"><span class="octicon octicon-link"></span></a>circuit switching  vs packet switching example:<a class="anchor-link" href="#circuit-switching--vs-packet-switching-example:"> </a>
-</h4>
+</h3>
 <ol>
 <li>link: 1 Mb/s</li>
 <li>user: 100 kb/s when “active”</li>
@@ -369,6 +357,125 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 <li>circuit switching: 10 users</li>
 <li>packet switching: if 35 users (N), probability &gt; 10 active at same time is less than .0004</li>
 </ul>
+<h3 id="How-do-loss-and-delay-occur?">
+<a class="anchor" href="#How-do-loss-and-delay-occur?" aria-hidden="true"><span class="octicon octicon-link"></span></a>How do loss and delay occur?<a class="anchor-link" href="#How-do-loss-and-delay-occur?"> </a>
+</h3>
+<ul>
+<li>packet arrival rate to link (temporarily) exceeds output link capacity</li>
+<li>packets queue, wait for turn</li>
+<li>the physical laws of reality introduce delay and loss</li>
+</ul>
+<h3 id="Four-sources-of-packet-delay">
+<a class="anchor" href="#Four-sources-of-packet-delay" aria-hidden="true"><span class="octicon octicon-link"></span></a>Four sources of packet delay<a class="anchor-link" href="#Four-sources-of-packet-delay"> </a>
+</h3>
+<ol>
+<li>nodal processing delay</li>
+<li>queueing delay</li>
+<li>transmission delay</li>
+<li>propagation delay</li>
+</ol>
+<h3 id="“Real”-Internet-delays,-routes">
+<a class="anchor" href="#%E2%80%9CReal%E2%80%9D-Internet-delays,-routes" aria-hidden="true"><span class="octicon octicon-link"></span></a>“Real” Internet delays, routes<a class="anchor-link" href="#%E2%80%9CReal%E2%80%9D-Internet-delays,-routes"> </a>
+</h3>
+<p>Try: tracert www.gogole.com (from NCCU WiFi)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="/blog/images/copied_from_nb/../images/tracert.png" alt="tracert.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Internet-protocol-stack">
+<a class="anchor" href="#Internet-protocol-stack" aria-hidden="true"><span class="octicon octicon-link"></span></a>Internet protocol stack<a class="anchor-link" href="#Internet-protocol-stack"> </a>
+</h3>
+<ul>
+<li>L7 application: supporting network applications (message exchanged) <em>e.g. FTP, SMTP, HTTP</em>
+</li>
+<li>L4 transport: process-process data transfer (with the help of OS e.g how to recover from package loss) <em>e.g. TCP, UDP</em>
+</li>
+<li>L3 network: routing of datagrams from source to destination (end-to-end host) <em>e.g. IP address, routing protocols</em> (packet switching</li>
+<li>L2 (data) link: data transfer between neighboring network elements (bit) <em>e.g. Ethernet, 802.111 (WiFi), PPP</em> (how to define <strong>bits</strong>
+</li>
+<li>L1 physical: bits “on the wire” (media) (how to define <strong>1 bit</strong> - 0 and 1</li>
+</ul>
+<h4 id="L5,-L6">
+<a class="anchor" href="#L5,-L6" aria-hidden="true"><span class="octicon octicon-link"></span></a>L5, L6<a class="anchor-link" href="#L5,-L6"> </a>
+</h4>
+<ul>
+<li>L6 presentation: allow applications to interpret meaning of data <em>e.g. encryption, compression</em>
+</li>
+<li>L5 session: synchronization, checkpointing, recovery of data exchange</li>
+<li>these services, if needed, must be implemented in application layer. <strong>needed?</strong>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p></p>
+<div class="flash">
+    <svg class="octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg>
+    <strong>Note: </strong>simple is beauty.
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Encapsulation">
+<a class="anchor" href="#Encapsulation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Encapsulation<a class="anchor-link" href="#Encapsulation"> </a>
+</h3>
+<p><img src="/blog/images/copied_from_nb/../images/encapsulation.png" alt="encapsulation.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">layer</th>
+<th style="text-align:left">data    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Application</td>
+<td style="text-align:left">MSG</td>
+</tr>
+<tr>
+<td style="text-align:left">Transport</td>
+<td style="text-align:left">Segment</td>
+</tr>
+<tr>
+<td style="text-align:left">Network</td>
+<td style="text-align:left">Datagram</td>
+</tr>
+<tr>
+<td style="text-align:left">(Data) Link</td>
+<td style="text-align:left">Frame</td>
+</tr>
+<tr>
+<td style="text-align:left">Physical</td>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -392,6 +499,8 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 <li>circuit vs packet? Pros &amp; Cons.</li>
 <li>FDM vs TDM. Pros &amp; cons.What is silent periods? Real-time service?</li>
 <li>given millions of access ISPs, how to connect them together?</li>
+<li>How to avoid delay? How to provision the buffer size?</li>
+<li>What else delay? (carry sense,VoIP packetization, …)</li>
 </ul>
 <h1 id="Google:">
 <a class="anchor" href="#Google:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Google:<a class="anchor-link" href="#Google:"> </a>
@@ -412,6 +521,7 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
 <li>who invent using fiber for data transmission?</li>
 <li>Cisco switch 2950/2960; router 3560/3650</li>
 <li>phone switchboard</li>
+<li>father of Internet (Leonard Kleinrock?</li>
 </ul>
 
 </div>
@@ -429,7 +539,7 @@ An MIS student (as an architect, and a designer) need to be familiar with <stron
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/blog/nccu/mis/conputer%20networks/2021/09/14/net1.html" hidden></a>
+</script><a class="u-url" href="/blog/nccu/mis/conputer%20networks/2021/10/05/net1.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
