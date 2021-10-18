@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>Introduction to R | Happy Duck Man</title>
+<title>Part 1 Getting started | Happy Duck Man</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Introduction to R" />
+<meta property="og:title" content="Part 1 Getting started" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="notes of 《R in Action》 for Data Science by NCCU CS" />
-<meta property="og:description" content="notes of 《R in Action》 for Data Science by NCCU CS" />
-<link rel="canonical" href="https://bollam1214.github.io/blog/nccu/cs/data%20science/r%20in%20action/2021/10/18/data1.html" />
-<meta property="og:url" content="https://bollam1214.github.io/blog/nccu/cs/data%20science/r%20in%20action/2021/10/18/data1.html" />
+<meta name="description" content="notes for《R in Action》" />
+<meta property="og:description" content="notes for《R in Action》" />
+<link rel="canonical" href="https://bollam1214.github.io/blog/r/data%20science/2021/10/18/r1.html" />
+<meta property="og:url" content="https://bollam1214.github.io/blog/r/data%20science/2021/10/18/r1.html" />
 <meta property="og:site_name" content="Happy Duck Man" />
-<meta property="og:image" content="https://bollam1214.github.io/blog/images/data.jpg" />
+<meta property="og:image" content="https://bollam1214.github.io/blog/images/r.jpg" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2021-10-18T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"notes of 《R in Action》 for Data Science by NCCU CS","url":"https://bollam1214.github.io/blog/nccu/cs/data%20science/r%20in%20action/2021/10/18/data1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/nccu/cs/data%20science/r%20in%20action/2021/10/18/data1.html"},"headline":"Introduction to R","dateModified":"2021-10-18T00:00:00-05:00","datePublished":"2021-10-18T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/data.jpg","@context":"https://schema.org"}</script>
+{"description":"notes for《R in Action》","url":"https://bollam1214.github.io/blog/r/data%20science/2021/10/18/r1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/r/data%20science/2021/10/18/r1.html"},"headline":"Part 1 Getting started","dateModified":"2021-10-18T00:00:00-05:00","datePublished":"2021-10-18T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/r.jpg","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bollam1214.github.io/blog/feed.xml" title="Happy Duck Man" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -72,7 +72,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Introduction to R</h1><p class="page-description">notes of 《R in Action》 for Data Science by NCCU CS</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-18T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Part 1 Getting started</h1><p class="page-description">notes for《R in Action》</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-18T00:00:00-05:00" itemprop="datePublished">
         Oct 18, 2021
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -85,16 +85,10 @@ window.onload = wrap_img;
     
       <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
       
-        <a class="category-tags-link" href="/blog/categories/#NCCU">NCCU</a>
-        &nbsp;
-      
-        <a class="category-tags-link" href="/blog/categories/#CS">CS</a>
+        <a class="category-tags-link" href="/blog/categories/#R">R</a>
         &nbsp;
       
         <a class="category-tags-link" href="/blog/categories/#data science">data science</a>
-        &nbsp;
-      
-        <a class="category-tags-link" href="/blog/categories/#R in Action">R in Action</a>
         
       
       </p>
@@ -105,19 +99,19 @@ window.onload = wrap_img;
         <div class="pb-5 d-flex flex-wrap flex-justify-end">
           <div class="px-2">
 
-    <a href="https://github.com/bollam1214/blog/tree/master/_notebooks/2021-10-18-data1.ipynb" role="button" target="_blank">
+    <a href="https://github.com/bollam1214/blog/tree/master/_notebooks/2021-10-18-r1.ipynb" role="button" target="_blank">
 <img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://mybinder.org/v2/gh/bollam1214/blog/master?filepath=_notebooks%2F2021-10-18-data1.ipynb" target="_blank">
+    <a href="https://mybinder.org/v2/gh/bollam1214/blog/master?filepath=_notebooks%2F2021-10-18-r1.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
     </a>
 </div>
 
           <div class="px-2">
-    <a href="https://colab.research.google.com/github/bollam1214/blog/blob/master/_notebooks/2021-10-18-data1.ipynb" target="_blank">
+    <a href="https://colab.research.google.com/github/bollam1214/blog/blob/master/_notebooks/2021-10-18-r1.ipynb" target="_blank">
         <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
     </a>
 </div>
@@ -126,7 +120,6 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#What-is-data-science?">What is data science? </a></li>
 <li class="toc-entry toc-h1"><a href="#Why-use-R?">Why use R? </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Functions-for-help">Functions for help </a></li>
@@ -140,35 +133,11 @@ window.onload = wrap_img;
 #################################################
 ### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
 #################################################
-# file to edit: _notebooks/2021-10-18-data1.ipynb
+# file to edit: _notebooks/2021-10-18-r1.ipynb
 -->
 
 <div class="container" id="notebook-container">
         
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="What-is-data-science?">
-<a class="anchor" href="#What-is-data-science?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is data science?<a class="anchor-link" href="#What-is-data-science?"> </a>
-</h1>
-<p>The statistician William S. Cleveland defined data science as an interdisciplenary field larger than statistics itself.</p>
-<ul>
-<li>statistics</li>
-<li>machine learning</li>
-<li>programming / computer science</li>
-<li>data engineering</li>
-<li>as manageing the process that can transform <strong>hypotheses</strong> and <strong>data</strong> into actionable <strong>predictions</strong>.</li>
-</ul>
-<p>The data scientist is responsible for:</p>
-<ul>
-<li>Data: acquiring the data</li>
-<li>Modeling: choosing the modeling technique, writing the code</li>
-<li>Evaluation: verifying the results</li>
-</ul>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -403,7 +372,7 @@ window.onload = wrap_img;
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/blog/nccu/cs/data%20science/r%20in%20action/2021/10/18/data1.html" hidden></a>
+</script><a class="u-url" href="/blog/r/data%20science/2021/10/18/r1.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
