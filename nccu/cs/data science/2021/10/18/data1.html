@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Data Science Week 1 | Happy Duck Man</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Science Week 1" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="notes for the course by NCCU CS" />
+<meta property="og:description" content="notes for the course by NCCU CS" />
+<link rel="canonical" href="https://bollam1214.github.io/blog/nccu/cs/data%20science/2021/10/18/data1.html" />
+<meta property="og:url" content="https://bollam1214.github.io/blog/nccu/cs/data%20science/2021/10/18/data1.html" />
+<meta property="og:site_name" content="Happy Duck Man" />
+<meta property="og:image" content="https://bollam1214.github.io/blog/images/data.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-10-18T00:00:00-05:00" />
+<script type="application/ld+json">
+{"description":"notes for the course by NCCU CS","url":"https://bollam1214.github.io/blog/nccu/cs/data%20science/2021/10/18/data1.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://bollam1214.github.io/blog/nccu/cs/data%20science/2021/10/18/data1.html"},"headline":"Data Science Week 1","dateModified":"2021-10-18T00:00:00-05:00","datePublished":"2021-10-18T00:00:00-05:00","image":"https://bollam1214.github.io/blog/images/data.jpg","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/blog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://bollam1214.github.io/blog/feed.xml" title="Happy Duck Man" /><link rel="shortcut icon" type="image/x-icon" href="/blog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/blog/">Happy Duck Man</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/blog/about/">About Me</a><a class="page-link" href="/blog/search/">Search</a><a class="page-link" href="/blog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Science Week 1</h1><p class="page-description">notes for the course by NCCU CS</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2021-10-18T00:00:00-05:00" itemprop="datePublished">
+        Oct 18, 2021
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/blog/categories/#NCCU">NCCU</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#CS">CS</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/blog/categories/#data science">data science</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-wrap flex-justify-end">
+          <div class="px-2">
+
+    <a href="https://github.com/bollam1214/blog/tree/master/_notebooks/2021-10-18-data1.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/blog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/bollam1214/blog/master?filepath=_notebooks%2F2021-10-18-data1.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/bollam1214/blog/blob/master/_notebooks/2021-10-18-data1.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/blog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul class="section-nav">
+<li class="toc-entry toc-h1"><a href="#What-is-data-science?">What is data science? </a></li>
+<li class="toc-entry toc-h1"><a href="#Why-use-R?">Why use R? </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Functions-for-help">Functions for help </a></li>
+<li class="toc-entry toc-h3"><a href="#Functions-for-managing-the-R-workspace">Functions for managing the R workspace </a></li>
+<li class="toc-entry toc-h3"><a href="#Functions-for-packages">Functions for packages </a></li>
+<li class="toc-entry toc-h3"><a href="#Special-terms-in-R">Special terms in R </a></li>
+<li class="toc-entry toc-h3"><a href="#Data-structures">Data structures </a></li>
+</ul>
+</li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2021-10-18-data1.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="What-is-data-science?">
+<a class="anchor" href="#What-is-data-science?" aria-hidden="true"><span class="octicon octicon-link"></span></a>What is data science?<a class="anchor-link" href="#What-is-data-science?"> </a>
+</h1>
+<p>The statistician William S. Cleveland defined data science as an interdisciplenary field larger than statistics itself.</p>
+<ul>
+<li>statistics</li>
+<li>machine learning</li>
+<li>programming / computer science</li>
+<li>data engineering</li>
+<li>as manageing the process that can transform <strong>hypotheses</strong> and <strong>data</strong> into actionable <strong>predictions</strong>.</li>
+</ul>
+<p>The data scientist is responsible for:</p>
+<ul>
+<li>Data: acquiring the data</li>
+<li>Modeling: choosing the modeling technique, writing the code</li>
+<li>Evaluation: verifying the results</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Why-use-R?">
+<a class="anchor" href="#Why-use-R?" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why use R?<a class="anchor-link" href="#Why-use-R?"> </a>
+</h1>
+<ul>
+<li>Free</li>
+<li>Any type of data analysis can be done in R</li>
+<li>New methods available for download on weekly basis</li>
+<li>The most comprehensive and powerful feature set to visualize complex data</li>
+<li>interactive: results can be saved, manipulated, and used as input for other steps</li>
+<li>easy to deal with a wide variety of sources</li>
+<li>functionality can be integrated into applications written in other languages</li>
+<li>runs on Windows, Unix, and Mac OS</li>
+<li>a variety of GUIs are available</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Functions-for-help">
+<a class="anchor" href="#Functions-for-help" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions for help<a class="anchor-link" href="#Functions-for-help"> </a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function</th>
+<th style="text-align:left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">help.start()</td>
+<td style="text-align:left">General help with manuals, FAQs, and reference materials</td>
+</tr>
+<tr>
+<td style="text-align:left">?foo</td>
+<td style="text-align:left">Help on function foo</td>
+</tr>
+<tr>
+<td style="text-align:left">??foo</td>
+<td style="text-align:left">Searches the help system for instances of the string foo</td>
+</tr>
+<tr>
+<td style="text-align:left">vignette()</td>
+<td style="text-align:left">Lists all available vignettes (practical introductory articles in PDF format)</td>
+</tr>
+<tr>
+<td style="text-align:left">vignette("foo")</td>
+<td style="text-align:left">Displays specific vignettes for topic foo</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Functions-for-managing-the-R-workspace">
+<a class="anchor" href="#Functions-for-managing-the-R-workspace" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions for managing the R workspace<a class="anchor-link" href="#Functions-for-managing-the-R-workspace"> </a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function</th>
+<th style="text-align:left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">getwd()</td>
+<td style="text-align:left">Lists the current working directory.</td>
+</tr>
+<tr>
+<td style="text-align:left">dir.create()</td>
+<td style="text-align:left">Create a directory</td>
+</tr>
+<tr>
+<td style="text-align:left">setwd("mydirectory")</td>
+<td style="text-align:left">Changes the current working directory to mydirectory. (won’t create a directory if it doesn’t exist)</td>
+</tr>
+<tr>
+<td style="text-align:left">ls()</td>
+<td style="text-align:left">Lists the objects in the current workspace.</td>
+</tr>
+<tr>
+<td style="text-align:left">rm(objectlist)</td>
+<td style="text-align:left">Removes (deletes) one or more objects.</td>
+</tr>
+<tr>
+<td style="text-align:left">help(options)</td>
+<td style="text-align:left">Provides information about available options.</td>
+</tr>
+<tr>
+<td style="text-align:left">options()</td>
+<td style="text-align:left">Lets you view or set current options.</td>
+</tr>
+<tr>
+<td style="text-align:left">q()</td>
+<td style="text-align:left">Quits R. You’ll be prompted to save the workspace.</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<div class="flash flash-success">
+    <svg class="octicon octicon-checklist octicon octicon-checklist octicon octicon-checklist" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M2.5 1.75a.25.25 0 01.25-.25h8.5a.25.25 0 01.25.25v7.736a.75.75 0 101.5 0V1.75A1.75 1.75 0 0011.25 0h-8.5A1.75 1.75 0 001 1.75v11.5c0 .966.784 1.75 1.75 1.75h3.17a.75.75 0 000-1.5H2.75a.25.25 0 01-.25-.25V1.75zM4.75 4a.75.75 0 000 1.5h4.5a.75.75 0 000-1.5h-4.5zM4 7.75A.75.75 0 014.75 7h2a.75.75 0 010 1.5h-2A.75.75 0 014 7.75zm11.774 3.537a.75.75 0 00-1.048-1.074L10.7 14.145 9.281 12.72a.75.75 0 00-1.062 1.058l1.943 1.95a.75.75 0 001.055.008l4.557-4.45z"></path></svg>
+    <strong>Tip: </strong>Just double-click the saved image file, which starts R, loads the saved workspace, and sets this location as the current working directory.
+</div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Functions-for-packages">
+<a class="anchor" href="#Functions-for-packages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions for packages<a class="anchor-link" href="#Functions-for-packages"> </a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Function</th>
+<th style="text-align:left">Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">library()</td>
+<td style="text-align:left">packages you’ve saved in your library</td>
+</tr>
+<tr>
+<td style="text-align:left">search()</td>
+<td style="text-align:left">packages you’ve loaded and ready to use</td>
+</tr>
+<tr>
+<td style="text-align:left">install.packages("foo")</td>
+<td style="text-align:left">install package "foo"</td>
+</tr>
+<tr>
+<td style="text-align:left">update.packages()</td>
+<td style="text-align:left">update packages</td>
+</tr>
+<tr>
+<td style="text-align:left">installed.packages()</td>
+<td style="text-align:left">check out installed packages</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Special-terms-in-R">
+<a class="anchor" href="#Special-terms-in-R" aria-hidden="true"><span class="octicon octicon-link"></span></a>Special terms in R<a class="anchor-link" href="#Special-terms-in-R"> </a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Term</th>
+<th style="text-align:left">meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">object</td>
+<td style="text-align:left">anything that can be assigned to a variable, which has a <em>mode</em> and a <em>class</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">mode</td>
+<td style="text-align:left">how the object is stored</td>
+</tr>
+<tr>
+<td style="text-align:left">class</td>
+<td style="text-align:left">how to handle it with functions like <code>print</code>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">data frame</td>
+<td style="text-align:left">similar to the dataset found in SAS, SPSS. columns = <em>variables</em>, rows = <em>observations</em>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">factor</td>
+<td style="text-align:left">nominal or ordinal variables that are stored and treated specially in R</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Data-structures">
+<a class="anchor" href="#Data-structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data structures<a class="anchor-link" href="#Data-structures"> </a>
+</h3>
+<p><strong>1. Vectors</strong></p>
+<div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">5</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">6</span><span class="p">,</span> <span class="m">-2</span><span class="p">,</span> <span class="m">4</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">"one"</span><span class="p">,</span> <span class="s">"two"</span><span class="p">,</span> <span class="s">"three"</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="kc">TRUE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">,</span> <span class="kc">TRUE</span><span class="p">,</span> <span class="kc">FALSE</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">a</span> <span class="o">&lt;-</span> <span class="nf">c</span><span class="p">(</span><span class="s">"k"</span><span class="p">,</span> <span class="s">"j"</span><span class="p">,</span> <span class="s">"h"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">,</span> <span class="s">"c"</span><span class="p">,</span> <span class="s">"m"</span><span class="p">)</span>
+<span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="m">3</span><span class="p">]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">"h"</span>
+<span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="nf">c</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">)]</span>
+<span class="p">[</span><span class="m">1</span><span class="p">]</span> <span class="s">"k"</span> <span class="s">"h"</span> <span class="s">"c"</span>
+<span class="o">&gt;</span> <span class="n">a</span><span class="p">[</span><span class="m">2</span><span class="o">:</span><span class="m">6</span><span class="p">][</span><span class="m">1</span><span class="p">]</span> <span class="s">"j"</span> <span class="s">"h"</span> <span class="s">"a"</span> <span class="s">"c"</span> <span class="s">"m"</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="bollam1214/blog"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/blog/nccu/cs/data%20science/2021/10/18/data1.html" hidden></a>
+</article>
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/blog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/blog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/blog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>quacking everyday</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/bollam1214" title="bollam1214"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/MJBoruto" title="MJBoruto"><svg class="svg-icon grey"><use xlink:href="/blog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
