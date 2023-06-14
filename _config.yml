@@ -36,11 +36,12 @@ url: "https://mj-boruto.github.io" # the base hostname & protocol for your site,
 #
 baseurl: "/blog" # the subpath of your site, e.g. "/blog".
 
-# Github and twitter are optional:
+# social links are optional:
 minima:
   social_links:
-    twitter: MJBoruto
-    github: MJ-Boruto
+    - { platform: github,  user_url: "https://github.com/mj-boruto" }
+    - { platform: twitter, user_url: "https://twitter.com/MJBoruto" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/pojen-pablo-chang/" }
 
 # Set this to true to get LaTeX math equation support
 use_math: 
